@@ -8,16 +8,23 @@
   body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, #000000, #737373);
+    background: linear-gradient(to right, #000000, #737373);  
   }
 
 /* Estilos do app */
 .app {
-  display: flex;
-  flex-direction: column;
-  align-items: center;  
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: flex-start;  
   height: 100svh;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .app {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
 
 
@@ -30,13 +37,42 @@
   padding: 1rem 2rem;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   z-index: 1000; /* Ensure the navbar is above other elements */
 }
+
+@media screen and (min-width: 768px) {
+  .navbar {
+    padding: 1rem 5rem;
+  }
+  
+}
+
+  .nav-links {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #333;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-link {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+
 .nav-links {
   display: flex;    
   list-style: none;
-
   padding: 20px;
 }
 
@@ -49,7 +85,12 @@
 }
 
 .nav-link:hover {
-  color: #2c6abb;
+  color: #d9dbdd;
+  border-radius: 20%;
+  -moz-box-shadow:0 3px 10px 0 #CCC;
+-webkit-box-shadow:0 3px 10px 0 #ccc;
+box-shadow:0 3px 10px 0 #ccc;
+text-shadow:0px 0px 5px #fff;
 }
 
 /* Estilos do hero */
@@ -57,9 +98,10 @@
 .hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  margin-top: 80px; /* Adjusted to account for the navbar height */
+  height: 50svh;
   width: 100%;
   color: aliceblue;
+  z-index: 999; /* Ensure the hero section is above other elements but below the navbar */
+  position: relative;
 }
