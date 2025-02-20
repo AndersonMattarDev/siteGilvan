@@ -6,7 +6,7 @@ const Hero = () => {
 return (
 	<div className="hero">
 		
-		<img className="hero-img-perfil" src="/assets/imagemTexte.jpg" alt="imagemcapa" />
+		<img className="hero-img-perfil" src="/assets/gilvan_foto.jpg" alt="imagemcapa" />
 		<h1>texto lateral</h1>
 	</div>
 )
