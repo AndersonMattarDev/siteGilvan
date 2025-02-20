@@ -2,8 +2,11 @@
 
 const NavBar = () => {
   return (
-	<nav className='navbar'>
+	
+		<nav className='navBar'>	
+	<button id="menuButton">&#9776;</button>	
 	  <ul className="nav-links">
+	  
 		<li><a className="nav-link" href="/">Home</a></li>
 		<li><a className="nav-link" href="/">Sobre</a></li>
 		<li><a className="nav-link" href="/">Livros</a></li>
@@ -11,7 +14,10 @@ const NavBar = () => {
 		<li><a className="nav-link" href="/">Contato</a></li>
 	  </ul>
 	</nav>
+	
   );
 };
+	
 
 export default NavBar;
+
